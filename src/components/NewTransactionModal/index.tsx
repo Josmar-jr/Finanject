@@ -33,8 +33,9 @@ export function NewTransactionModal({
     });
 
     setTitle("");
-    setAmount(0);
+    setAmount();
     setType("");
+    setComment("");
     onRequestClose();
   }
 

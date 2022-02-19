@@ -1,24 +1,27 @@
 # Finanject
 
-## Demonstration 
-<img src="./img/Image__Demonstration.jpeg">
+## Demonstration
+
+<img src="./src/assets/screen.jpeg">
+<hr />
+<img src="./src/assets/screen-with-modal.jpeg">
 
 ## Aprendizado
 
-* Aplicação de motion design ao projeto
+- Projeto focado no aprendizado básico do ReactJS, consumindo uma API para fornecer e manipular os dados.
 
 ## Teachs and libs
 
-* [] ReactJS
-* [] Typescript
-* [] Styled Components
-* [] Vite
-* [] React-modal
-* [] Axios
+- [] ReactJS
+- [] Typescript
+- [] Styled Components
+- [] Vite
+- [] React-modal
+- [] Axios
 
 ## LINK
 
-* https://josmar-jr.github.io/Spiderman/
+- https://josmar-jr.github.io/Spiderman/
 
 ## Author
 
