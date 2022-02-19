@@ -54,6 +54,14 @@ export const Container = styled.div`
       padding: 1rem 2rem;
     }
 
+    .expense {
+      color: #e52e4d;
+    }
+
+    .income {
+      color: #33cc95;
+    }
+
     button {
       padding: 0.5rem;
       background: transparent;

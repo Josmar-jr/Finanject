@@ -1,4 +1,5 @@
 import { FormEvent, useState } from "react";
+import { FaMoneyBillWaveAlt } from "react-icons/fa";
 
 import { IoMdClose } from "react-icons/io";
 
@@ -19,8 +20,8 @@ export function NewTransactionModal({
 
   const [title, setTitle] = useState("");
   const [comment, setComment] = useState("");
-  const [amount, setAmount] = useState<number>();
-  const [type, setType] = useState("");
+  const [amount, setAmount] = useState<number>(0);
+  const [type, setType] = useState<"income" | "expense">("income");
 
   async function handleCreateNewTransaction(event: FormEvent) {
     event.preventDefault();
@@ -34,7 +35,7 @@ export function NewTransactionModal({
 
     setTitle("");
     setAmount(0);
-    setType("");
+    setType("income");
     setComment("");
     onRequestClose();
   }
@@ -92,7 +93,7 @@ export function NewTransactionModal({
             isActive={type === "income"}
             activeColor="green"
           >
-            {/* <img src={incomeImg} alt="Entrada" /> */}
+            <FaMoneyBillWaveAlt fontSize="24" color="#33cc95" />
             <span>Entrada</span>
           </RadioBox>
 
@@ -104,7 +105,7 @@ export function NewTransactionModal({
             isActive={type === "expense"}
             activeColor="red"
           >
-            {/* <img src={outcomeImg} alt="Saída" /> */}
+            <FaMoneyBillWaveAlt fontSize="24" color="#e52e4d" />
             <span>Saída</span>
           </RadioBox>
         </TransactionTypeContainer>

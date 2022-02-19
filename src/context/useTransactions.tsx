@@ -12,7 +12,7 @@ interface Transaction {
   title: string;
   amount: number;
   tag: string;
-  type: string;
+  type: "income" | "expense";
   date: string;
 }
 
@@ -59,7 +59,7 @@ export function TransactionsProvider({ children }: TransactionsProviderProps) {
   const createTransaction = async (transactionInput: TransactionInput) => {
     try {
       setIsLoading(true);
-      const response = await api.post("/transacoes/", transactionInput);
+      await api.post("/transacoes/", transactionInput);
     } catch (error) {
       throw new Error(`Deu um erro: ${error}`);
     } finally {
@@ -89,7 +89,7 @@ export function TransactionsProvider({ children }: TransactionsProviderProps) {
       }
     };
     getAllTransactions();
-  }, [isDelete, hasRegister]);
+  }, [isDelete, hasRegister, accumulatedValues]);
 
   const deleteTransaction = async (id: number) => {
     try {
